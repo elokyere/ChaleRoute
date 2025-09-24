@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaleRoute - Smart Delivery Route Optimization for Accra</title>
+    <meta name="description" content="WhatsApp bot that helps delivery drivers in Accra optimize routes, save fuel, and stay safe. Get instant route optimization and emergency safety features.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #4a4a4a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #1a1a1a;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0 8rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-text {
+            text-align: left;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: #1a1a1a;
+        }
+        
+        .highlight-text {
+            color: #2563eb;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #4a4a4a;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666666;
+            font-weight: 500;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin: 2.5rem 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+        
+        .cta-button.primary {
+            background: #2563eb;
+            color: #ffffff;
+        }
+        
+        .cta-button.primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: #1a1a1a;
+            border: 2px solid #1a1a1a;
+        }
+        
+        .cta-button.secondary:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .trust-indicators {
+            margin-top: 2rem;
+        }
+        
+        .trust-text {
+            font-size: 0.95rem;
+            color: #666666;
+            font-weight: 500;
+        }
+        
+        /* Phone Mockup */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .phone-mockup {
+            width: 300px;
+            height: 600px;
+            background: #1a1a1a;
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .whatsapp-interface {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-header {
+            background: #128c7e;
+            padding: 1rem;
+            color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .avatar {
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .contact-details .name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .contact-details .status {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            overflow-y: auto;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 0.75rem 1rem;
+            border-radius: 18px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .message.received {
+            background: #f0f0f0;
+            align-self: flex-start;
+        }
+        
+        .message.sent {
+            background: #dcf8c6;
+            align-self: flex-end;
+        }
+        
+        .message .link {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+        
+        /* Get Started Section */
+        .get-started {
+            padding: 6rem 0;
+            background: #ffffff;
+        }
+        
+        .get-started-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .get-started h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .ghana-accent {
+            color: #2563eb;
+        }
+        
+        .get-started-subtitle {
+            font-size: 1.25rem;
+            color: #4a4a4a;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        
+        .steps-list {
+            margin: 2.5rem 0;
+        }
+        
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        
+        .step-content p {
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .cta-button.large {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.25rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .whatsapp-icon {
+            font-size: 1.5rem;
+        }
+        
+        .cta-note {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #666666;
+        }
+        
+        /* Savings Calculator */
+        .savings-calculator {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .savings-calculator h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #1a1a1a;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .calc-item {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .vehicle-type {
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        
+        .savings-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .savings-line.total {
+            border-bottom: 2px solid #2563eb;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+        
+        .savings-line.total .amount {
+            color: #2563eb;
+            font-size: 1.25rem;
+        }
+        
+        .amount {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .calculation-note {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        
+        .calculation-note p {
+            font-size: 0.85rem;
+            color: #666666;
+            font-style: italic;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .features-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #4a4a4a;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+            text-align: left;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card.primary {
+            border: 2px solid #2563eb;
+            background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card.primary .feature-icon {
+            background: #2563eb;
+            color: white;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+            color: #1a1a1a;
+        }
+        
+        .feature-card p {
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-benefit {
+            background: #f0f9ff;
+            color: #2563eb;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+            border: 1px solid #e0f2fe;
+        }
+        
+        .feature-card.primary .feature-benefit {
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 6rem 0;
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #1a1a1a;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin: 0 auto 1.5rem auto;
+        }
+        
+        .step h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .step p {
+            color: #4a4a4a;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .benefit-icon {
+            width: 24px;
+            height: 24px;
+            background: #1a1a1a;
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+        
+        .benefit-content h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .benefit-content p {
+            color: #4a4a4a;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 4rem 0 2rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: #cccccc;
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+        
+        .footer-section a:hover {
+            color: #ffffff;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #333333;
+            padding-top: 2rem;
+            text-align: center;
+            color: #999999;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 0.5rem 0;
+            }
+            
+            .phone-mockup {
+                width: 250px;
+                height: 500px;
+            }
+            
+            .get-started-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features h2,
+            .how-it-works h2,
+            .benefits h2 {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">ChaleRoute</a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="https://www.notion.so/ChaleRoute-Privacy-Policy-275150cb21a980caa755ebca0b188b1e" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Chale, Save <span class="highlight-text">GH₵1,026</span> Monthly with Smart Routes!</h1>
+                    <p class="hero-subtitle">Your WhatsApp buddy for delivery optimization. We help Accra drivers cut fuel costs, avoid traffic chaos, and stay safe on the road. No app downloads, just smart routes via WhatsApp.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">GH₵1,026</div>
+                            <div class="stat-label">Monthly Savings (Vans)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">GH₵703</div>
+                            <div class="stat-label">Monthly Savings (Cars)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">GH₵240</div>
+                            <div class="stat-label">Monthly Savings (Bikes)</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#get-started" class="cta-button primary">Start Saving Now</a>
+                        <a href="#demo" class="cta-button secondary">See How It Works</a>
+                    </div>
+
+                    <div class="trust-indicators">
+                        <p class="trust-text">Trusted by drivers across Accra • 24/7 Safety Support • No App Required</p>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="whatsapp-interface">
+                                <div class="chat-header">
+                                    <div class="contact-info">
+                                        <div class="avatar">🚚</div>
+                                        <div class="contact-details">
+                                            <div class="name">ChaleRoute</div>
+                                            <div class="status">online</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="message received">
+                                        <div class="message-text">Chale! Send me your delivery addresses and I'll optimize your route. Save fuel, save time! 🚀</div>
+                                    </div>
+                                    <div class="message sent">
+                                        <div class="message-text">Legon, Osu, Lapaz</div>
+                                    </div>
+                                    <div class="message received">
+                                        <div class="message-text">Perfect! Your optimized route saves GH₵43 today. Here's your Google Maps link: <span class="link">maps.google.com/route</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section class="get-started" id="get-started">
+        <div class="container">
+            <div class="get-started-content">
+                <div class="get-started-text">
+                    <h2>Ready to Start Saving? <span class="ghana-accent">Chale, Let's Go!</span></h2>
+                    <p class="get-started-subtitle">Join hundreds of Accra drivers already saving money with ChaleRoute. Get started in 3 simple steps:</p>
+                    
+                    <div class="steps-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Add ChaleRoute to WhatsApp</h4>
+                                <p>Save our number and send "Hi Chale" to get started</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Tell Us Your Vehicle</h4>
+                                <p>Choose: car, motorbike, van, or bike for accurate fuel calculations</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Send Your Deliveries</h4>
+                                <p>Share addresses and get optimized routes with savings!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <a href="https://wa.me/233XXXXXXXXX?text=Hi%20Chale" class="cta-button primary large">
+                            <span class="whatsapp-icon">💬</span>
+                            Start on WhatsApp Now
+                        </a>
+                        <p class="cta-note">No registration required • Works instantly • 24/7 available</p>
+                    </div>
+                </div>
+                
+                <div class="get-started-visual">
+                    <div class="savings-calculator">
+                        <h3>Your Potential Savings</h3>
+                        <div class="calculator-grid">
+                            <div class="calc-item">
+                                <div class="vehicle-type">Van Driver</div>
+                                <div class="savings-breakdown">
+                                    <div class="savings-line">
+                                        <span>Daily Savings:</span>
+                                        <span class="amount">GH₵43</span>
+                                    </div>
+                                    <div class="savings-line">
+                                        <span>Weekly Savings:</span>
+                                        <span class="amount">GH₵301</span>
+                                    </div>
+                                    <div class="savings-line total">
+                                        <span>Monthly Savings:</span>
+                                        <span class="amount">GH₵1,026</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calc-item">
+                                <div class="vehicle-type">Car Driver</div>
+                                <div class="savings-breakdown">
+                                    <div class="savings-line">
+                                        <span>Daily Savings:</span>
+                                        <span class="amount">GH₵29</span>
+                                    </div>
+                                    <div class="savings-line">
+                                        <span>Weekly Savings:</span>
+                                        <span class="amount">GH₵203</span>
+                                    </div>
+                                    <div class="savings-line total">
+                                        <span>Monthly Savings:</span>
+                                        <span class="amount">GH₵703</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculation-note">
+                            <p>*Based on Accra fuel prices (GH₵12.5/L), average vehicle consumption, and traffic optimization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Accra Drivers Choose ChaleRoute</h2>
+            <p class="features-subtitle">Built by developers who understand Accra's challenges. Every feature designed for real-world delivery scenarios.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card primary">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Smart Accra Route Optimization</h3>
+                    <p>Our AI knows Accra's neighborhoods like Osu, East Legon, Kaneshie, and Lapaz. Groups your deliveries to minimize backtracking and traffic delays.</p>
+                    <div class="feature-benefit">Saves 30-40% travel time</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⛽</div>
+                    <h3>Real Fuel Savings Calculator</h3>
+                    <p>Based on actual Accra fuel prices and traffic patterns. See exactly how much you save with mathematical precision.</p>
+                    <div class="feature-benefit">Proven savings calculations</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Emergency Safety Network</h3>
+                    <p>Instant SOS to Ghana emergency services (191, 112, 192) with automatic location sharing. Your safety is our priority.</p>
+                    <div class="feature-benefit">24/7 safety monitoring</div>
+                </div>
+                <div class="feature-card primary">
+                    <div class="feature-icon">💬</div>
+                    <h3>WhatsApp-First Design</h3>
+                    <p>No apps, no downloads. Works directly in WhatsApp like chatting with a friend. Perfect for busy delivery drivers.</p>
+                    <div class="feature-benefit">Zero setup required</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Late-Night Safety Checks</h3>
+                    <p>Automatic check-ins during dangerous hours (11 PM - 5 AM). Respond with "YES", "NO", or "NEED HELP" for appropriate support.</p>
+                    <div class="feature-benefit">Peace of mind for families</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Accra Traffic Intelligence</h3>
+                    <p>Understands Circle traffic, Tema Motorway conditions, and neighborhood shortcuts. Built by people who drive Accra daily.</p>
+                    <div class="feature-benefit">Local traffic expertise</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Start Conversation</h3>
+                    <p>Send "Hi Chale" to our WhatsApp number to begin your delivery optimization session.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Choose Vehicle</h3>
+                    <p>Select your vehicle type (car, motorbike, van, or bike) for accurate fuel calculations.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Set Start Location</h3>
+                    <p>Tell us where you're starting from (e.g., "Circle", "East Legon", "Tema").</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Add Deliveries</h3>
+                    <p>Send us your delivery addresses one by one via WhatsApp text or location pins.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Get Optimized Route</h3>
+                    <p>Send "done" and receive your clustered, optimized route with Google Maps links and fuel savings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2>Why Choose ChaleRoute?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon"></div>
+                    <div class="benefit-content">
+                        <h4>Proven Fuel Savings</h4>
+                        <p>Save up to GH₵1,026/month for vans, GH₵703/month for cars with optimized routes.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"></div>
+                    <div class="benefit-content">
+                        <h4>Safety First</h4>
+                        <p>Built-in emergency features and late-night safety monitoring for driver protection.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"></div>
+                    <div class="benefit-content">
+                        <h4>No App Required</h4>
+                        <p>Works entirely through WhatsApp - no downloads, no complicated setups.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"></div>
+                    <div class="benefit-content">
+                        <h4>Accra Optimized</h4>
+                        <p>Designed specifically for Accra's neighborhoods, traffic patterns, and road conditions.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"></div>
+                    <div class="benefit-content">
+                        <h4>Real-Time Updates</h4>
+                        <p>Get instant route optimization and real-time traffic considerations.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"></div>
+                    <div class="benefit-content">
+                        <h4>Privacy Protected</h4>
+                        <p>Your data is automatically deleted after each session. No permanent storage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ChaleRoute</h3>
+                    <p>Smart delivery route optimization for Accra drivers. Save fuel, time, and stay safe with our WhatsApp-powered service.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#benefits">Benefits</a>
+                    <a href="https://www.notion.so/ChaleRoute-Privacy-Policy-275150cb21a980caa755ebca0b188b1e" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <p>Email: chaleroute@gmail.com</p>
+                    <p>WhatsApp: Available 24/7</p>
+                    <p>Emergency: SOS feature for immediate help</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <a href="https://www.notion.so/ChaleRoute-Privacy-Policy-275150cb21a980caa755ebca0b188b1e" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                    <p>GDPR & CCPA Compliant</p>
+                    <p>Data automatically deleted</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ChaleRoute. All rights reserved. Built for Accra drivers, by developers who understand local challenges.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
