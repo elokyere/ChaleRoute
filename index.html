@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChaleRoute - Smart Delivery Route Optimization for Accra</title>
-    <meta name="description" content="WhatsApp bot that helps delivery drivers in Accra optimize routes, save fuel, and stay safe. Get instant route optimization and emergency safety features.">
+    <title>ChaleRoute: Smart Logistics Technology for Ghana</title>
+    <meta name="description" content="ChaleRoute smart route optimization technology. Powered by RouteOptimizer Solutions. Exclusively implemented and supported in Ghana by Capaz Facility Management Services (BN638160723).">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -185,8 +186,15 @@
         
         .trust-text {
             font-size: 0.95rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        .whatsapp-note {
+            font-size: 0.85rem;
             color: #666666;
-            font-weight: 500;
+            font-style: italic;
+            margin-top: 0.5rem;
         }
         
         /* Phone Mockup */
@@ -366,8 +374,9 @@
             gap: 0.75rem;
         }
         
-        .whatsapp-icon {
-            font-size: 1.5rem;
+        .whatsapp-cta i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
         }
         
         .cta-note {
@@ -511,6 +520,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
+            color: #666666;
         }
         
         .feature-card.primary .feature-icon {
@@ -759,6 +769,429 @@
             }
         }
         
+        /* Partnership Section */
+        .partnership {
+            padding: 6rem 0;
+            background: #ffffff;
+        }
+        
+        .partnership h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .partnership-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #4a4a4a;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .partnership-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .partnership-text h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        
+        .business-registration {
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .partnership-text p {
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .partnership-details h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        
+        .partnership-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .partnership-details li {
+            color: #4a4a4a;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+        
+        .partnership-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .partnership-flow {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .flow-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            min-width: 150px;
+        }
+        
+        .flow-icon {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #666666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background: #f0f0f0;
+            border-radius: 6px;
+        }
+        
+        .flow-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        
+        .flow-item p {
+            font-size: 0.9rem;
+            color: #666666;
+        }
+        
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: #2563eb;
+            font-weight: bold;
+        }
+        
+        /* Responsive Design for Partnership */
+        @media (max-width: 768px) {
+            .partnership-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .partnership-flow {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+        
+        .about h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .about-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #4a4a4a;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .company-card {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .company-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        
+        .company-role {
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        
+        .company-details p {
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .company-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .company-details li {
+            color: #4a4a4a;
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .company-details li:before {
+            content: "•";
+            color: #2563eb;
+            position: absolute;
+            left: 0;
+        }
+        
+        .partnership-synergy {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+            text-align: center;
+        }
+        
+        .partnership-synergy h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        
+        .partnership-synergy p {
+            color: #4a4a4a;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .contact-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #4a4a4a;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-card {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        
+        .business-role {
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        
+        .contact-item p {
+            color: #4a4a4a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #25D366;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            background: #f0f9ff;
+            border-radius: 6px;
+            border: 1px solid #e0f2fe;
+        }
+        
+        .whatsapp-link:hover {
+            background: #e0f2fe;
+        }
+        
+        .compliance-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .compliance-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #1a1a1a;
+        }
+        
+        .compliance-info p {
+            color: #4a4a4a;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .contact-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .contact-flow {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .flow-step {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            min-width: 150px;
+        }
+        
+        .step-icon {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #666666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background: #e9ecef;
+            border-radius: 6px;
+        }
+        
+        .flow-step h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        
+        .flow-step p {
+            font-size: 0.9rem;
+            color: #666666;
+        }
+        
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: #2563eb;
+            font-weight: bold;
+        }
+        
+        /* Responsive Design for New Sections */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .contact-flow {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+        }
+        
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
@@ -774,7 +1207,8 @@
                 <ul class="nav-links">
                     <li><a href="#features">Features</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a href="https://www.notion.so/ChaleRoute-Privacy-Policy-275150cb21a980caa755ebca0b188b1e" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
                 </ul>
             </nav>
@@ -786,8 +1220,8 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Chale, Save <span class="highlight-text">GH₵1,026</span> Monthly with Smart Routes!</h1>
-                    <p class="hero-subtitle">Your WhatsApp buddy for delivery optimization. We help Accra drivers cut fuel costs, avoid traffic chaos, and stay safe on the road. No app downloads, just smart routes via WhatsApp.</p>
+                    <h1>Chale, Maximize Deliveries. Minimize Fuel. <span class="highlight-text">Smart Route Optimization</span></h1>
+                    <p class="hero-subtitle">ChaleRoute smart logistics technology. Powered by RouteOptimizer Solutions. Exclusively implemented and supported in Ghana by <strong>Capaz Facility Management Services (BN638160723)</strong>.</p>
                     
                     <div class="hero-stats">
                         <div class="stat-item">
@@ -805,12 +1239,15 @@
                     </div>
 
                     <div class="hero-cta">
-                        <a href="#get-started" class="cta-button primary">Start Saving Now</a>
-                        <a href="#demo" class="cta-button secondary">See How It Works</a>
+                        <a href="#contact" class="cta-button primary whatsapp-cta">
+                            <i class="fas fa-envelope"></i>
+                            Get Started - Contact Us
+                        </a>
+                        <a href="#partnership" class="cta-button secondary">Our Partnership</a>
                     </div>
 
                     <div class="trust-indicators">
-                        <p class="trust-text">Trusted by drivers across Accra • 24/7 Safety Support • No App Required</p>
+                        <p class="trust-text">Meta/WhatsApp Business API Application in Progress • Licensed by Capaz Facility Management Services (BN638160723) • ChaleRoute Technology by RouteOptimizer Solutions</p>
                     </div>
                 </div>
                 
@@ -820,16 +1257,16 @@
                             <div class="whatsapp-interface">
                                 <div class="chat-header">
                                     <div class="contact-info">
-                                        <div class="avatar">🚚</div>
+                                        <div class="avatar">CR</div>
                                         <div class="contact-details">
-                                            <div class="name">ChaleRoute</div>
+                                            <div class="name">ChaleRoute via Capaz</div>
                                             <div class="status">online</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="chat-messages">
                                     <div class="message received">
-                                        <div class="message-text">Chale! Send me your delivery addresses and I'll optimize your route. Save fuel, save time! 🚀</div>
+                                        <div class="message-text">Chale! Send me your delivery addresses and I'll optimize your route. Save fuel, save time!</div>
                                     </div>
                                     <div class="message sent">
                                         <div class="message-text">Legon, Osu, Lapaz</div>
@@ -851,39 +1288,38 @@
         <div class="container">
             <div class="get-started-content">
                 <div class="get-started-text">
-                    <h2>Ready to Start Saving? <span class="ghana-accent">Chale, Let's Go!</span></h2>
-                    <p class="get-started-subtitle">Join hundreds of Accra drivers already saving money with ChaleRoute. Get started in 3 simple steps:</p>
+                    <h2>How ChaleRoute Technology Works <span class="ghana-accent">Through Capaz</span></h2>
+                    <p class="get-started-subtitle">ChaleRoute provides the core technology platform. Capaz handles all client onboarding, local customization, and ongoing support in Ghana.</p>
                     
                     <div class="steps-list">
                         <div class="step-item">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4>Add ChaleRoute to WhatsApp</h4>
-                                <p>Save our number and send "Hi Chale" to get started</p>
+                                <h4>ChaleRoute Technology Platform</h4>
+                                <p>Advanced route optimization algorithms and fuel savings calculations</p>
                             </div>
                         </div>
                         <div class="step-item">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h4>Tell Us Your Vehicle</h4>
-                                <p>Choose: car, motorbike, van, or bike for accurate fuel calculations</p>
+                                <h4>Capaz Local Implementation</h4>
+                                <p>Client onboarding, WhatsApp integration, and regional support in Ghana</p>
                             </div>
                         </div>
                         <div class="step-item">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h4>Send Your Deliveries</h4>
-                                <p>Share addresses and get optimized routes with savings!</p>
+                                <h4>Certified Partnership</h4>
+                                <p>Licensed through Capaz business registration for Meta compliance</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="cta-section">
-                        <a href="https://wa.me/233XXXXXXXXX?text=Hi%20Chale" class="cta-button primary large">
-                            <span class="whatsapp-icon">💬</span>
-                            Start on WhatsApp Now
+                        <a href="#partnership" class="cta-button primary large">
+                            Learn About Our Partnership
                         </a>
-                        <p class="cta-note">No registration required • Works instantly • 24/7 available</p>
+                        <p class="cta-note">ChaleRoute Technology by RouteOptimizer Solutions • Licensed Implementation by Capaz Facility Management Services (BN638160723)</p>
                     </div>
                 </div>
                 
@@ -927,7 +1363,7 @@
                             </div>
                         </div>
                         <div class="calculation-note">
-                            <p>*Based on Accra fuel prices (GH₵12.5/L), average vehicle consumption, and traffic optimization</p>
+                            <p><a href="#methodology" style="color: #2563eb; text-decoration: underline;">View Savings Calculation Methodology</a> - Based on Accra fuel prices (GH₵12.5/L), average vehicle consumption, and traffic optimization</p>
                         </div>
                     </div>
                 </div>
@@ -938,44 +1374,44 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <h2>Why Accra Drivers Choose ChaleRoute</h2>
-            <p class="features-subtitle">Built by developers who understand Accra's challenges. Every feature designed for real-world delivery scenarios.</p>
+            <h2>ChaleRoute Technology Features</h2>
+            <p class="features-subtitle">Smart logistics technology platform. Licensed implementation by Capaz Facility Management Services (BN638160723) across Greater Accra.</p>
             
             <div class="features-grid">
                 <div class="feature-card primary">
-                    <div class="feature-icon">🗺️</div>
+                    <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
                     <h3>Smart Accra Route Optimization</h3>
-                    <p>Our AI knows Accra's neighborhoods like Osu, East Legon, Kaneshie, and Lapaz. Groups your deliveries to minimize backtracking and traffic delays.</p>
+                    <p>Our AI knows Accra's neighborhoods like Osu, East Legon, Kaneshie, and Lapaz. Using local traffic data and community-reported delays to group your deliveries and minimize backtracking.</p>
                     <div class="feature-benefit">Saves 30-40% travel time</div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⛽</div>
+                    <div class="feature-icon"><i class="fas fa-gas-pump"></i></div>
                     <h3>Real Fuel Savings Calculator</h3>
-                    <p>Based on actual Accra fuel prices and traffic patterns. See exactly how much you save with mathematical precision.</p>
+                    <p>Based on actual Accra fuel prices and traffic patterns. See exactly how much you save with mathematical precision using real-time data.</p>
                     <div class="feature-benefit">Proven savings calculations</div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🚨</div>
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
                     <h3>Emergency Safety Network</h3>
                     <p>Instant SOS to Ghana emergency services (191, 112, 192) with automatic location sharing. Your safety is our priority.</p>
                     <div class="feature-benefit">24/7 safety monitoring</div>
                 </div>
                 <div class="feature-card primary">
-                    <div class="feature-icon">💬</div>
+                    <div class="feature-icon"><i class="fab fa-whatsapp"></i></div>
                     <h3>WhatsApp-First Design</h3>
                     <p>No apps, no downloads. Works directly in WhatsApp like chatting with a friend. Perfect for busy delivery drivers.</p>
                     <div class="feature-benefit">Zero setup required</div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🌙</div>
+                    <div class="feature-icon"><i class="fas fa-moon"></i></div>
                     <h3>Late-Night Safety Checks</h3>
                     <p>Automatic check-ins during dangerous hours (11 PM - 5 AM). Respond with "YES", "NO", or "NEED HELP" for appropriate support.</p>
                     <div class="feature-benefit">Peace of mind for families</div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📍</div>
+                    <div class="feature-icon"><i class="fas fa-route"></i></div>
                     <h3>Accra Traffic Intelligence</h3>
-                    <p>Understands Circle traffic, Tema Motorway conditions, and neighborhood shortcuts. Built by people who drive Accra daily.</p>
+                    <p>Understands Circle traffic, Tema Motorway conditions, and neighborhood shortcuts. Built by people who drive Accra daily with real-time traffic data.</p>
                     <div class="feature-benefit">Local traffic expertise</div>
                 </div>
             </div>
@@ -985,32 +1421,32 @@
     <!-- How It Works Section -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
-            <h2>How It Works</h2>
+            <h2>Technology Implementation Process</h2>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Start Conversation</h3>
-                    <p>Send "Hi Chale" to our WhatsApp number to begin your delivery optimization session.</p>
+                    <h3>ChaleRoute Technology</h3>
+                    <p>Core platform provides advanced route optimization algorithms and fuel savings calculations.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Choose Vehicle</h3>
-                    <p>Select your vehicle type (car, motorbike, van, or bike) for accurate fuel calculations.</p>
+                    <h3>Capaz Implementation</h3>
+                    <p>Local partner handles WhatsApp integration, client onboarding, and regional customization.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Set Start Location</h3>
-                    <p>Tell us where you're starting from (e.g., "Circle", "East Legon", "Tema").</p>
+                    <h3>Meta Compliance</h3>
+                    <p>Licensed through Capaz business registration for WhatsApp Business API compliance.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>Add Deliveries</h3>
-                    <p>Send us your delivery addresses one by one via WhatsApp text or location pins.</p>
+                    <h3>Local Support</h3>
+                    <p>Capaz provides ongoing support, maintenance, and local expertise across Greater Accra.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">5</div>
-                    <h3>Get Optimized Route</h3>
-                    <p>Send "done" and receive your clustered, optimized route with Google Maps links and fuel savings.</p>
+                    <h3>Certified Partnership</h3>
+                    <p>Established local partner with business registration and regional logistics expertise.</p>
                 </div>
             </div>
         </div>
@@ -1019,48 +1455,214 @@
     <!-- Benefits Section -->
     <section class="benefits" id="benefits">
         <div class="container">
-            <h2>Why Choose ChaleRoute?</h2>
+            <h2>Why Choose ChaleRoute Technology Partnership?</h2>
             <div class="benefits-grid">
                 <div class="benefit-item">
                     <div class="benefit-icon"></div>
                     <div class="benefit-content">
-                        <h4>Proven Fuel Savings</h4>
-                        <p>Save up to GH₵1,026/month for vans, GH₵703/month for cars with optimized routes.</p>
+                        <h4>Advanced Technology Platform</h4>
+                        <p>ChaleRoute technology by RouteOptimizer Solutions provides cutting-edge route optimization algorithms and fuel savings calculations.</p>
                     </div>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon"></div>
                     <div class="benefit-content">
-                        <h4>Safety First</h4>
-                        <p>Built-in emergency features and late-night safety monitoring for driver protection.</p>
+                        <h4>Licensed Local Implementation Partner</h4>
+                        <p>Capaz Facility Management Services (BN638160723) handles all local operations, support, service delivery, and Meta compliance.</p>
                     </div>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon"></div>
                     <div class="benefit-content">
-                        <h4>No App Required</h4>
-                        <p>Works entirely through WhatsApp - no downloads, no complicated setups.</p>
+                        <h4>Business Registration Compliance</h4>
+                        <p>Licensed through Capaz business registration for Meta WhatsApp Business API compliance.</p>
                     </div>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon"></div>
                     <div class="benefit-content">
-                        <h4>Accra Optimized</h4>
-                        <p>Designed specifically for Accra's neighborhoods, traffic patterns, and road conditions.</p>
+                        <h4>Regional Expertise</h4>
+                        <p>Capaz specializes in facility operations and logistics optimization across Greater Accra.</p>
                     </div>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon"></div>
                     <div class="benefit-content">
-                        <h4>Real-Time Updates</h4>
-                        <p>Get instant route optimization and real-time traffic considerations.</p>
+                        <h4>Certified Partnership</h4>
+                        <p>Established partnership between RouteOptimizer Solutions and Capaz Facility Management Services.</p>
                     </div>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon"></div>
                     <div class="benefit-content">
-                        <h4>Privacy Protected</h4>
-                        <p>Your data is automatically deleted after each session. No permanent storage.</p>
+                        <h4>Local Business Registration</h4>
+                        <p>Capaz Facility Management Services - Licensed business registration for Meta compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="partnership" id="partnership">
+        <div class="container">
+            <h2>Our Licensed Implementation Partnership</h2>
+            <p class="partnership-subtitle">ChaleRoute technology exclusively implemented and supported in Ghana by Capaz Facility Management Services (BN638160723)</p>
+            
+            <div class="partnership-content">
+                <div class="partnership-text">
+                    <h3>Capaz Facility Management Services</h3>
+                    <p class="business-registration">Business Registration: BN638160723</p>
+                    <p>Specializing in facility operations and logistics optimization across Greater Accra. Capaz Facility Management Services is the licensed local implementation partner responsible for all client onboarding, WhatsApp integration, service delivery, and ongoing support in Ghana.</p>
+                    
+                    <div class="partnership-details">
+                        <h4>About Our Partner</h4>
+                        <ul>
+                            <li>Licensed business registration in Ghana (BN638160723)</li>
+                            <li>Meta/WhatsApp Business API compliance and verification</li>
+                            <li>Local expertise in Accra logistics and traffic patterns</li>
+                            <li>24/7 regional support and maintenance</li>
+                            <li>Facility management and operations experience</li>
+                            <li>Responsible for service delivery and customer support</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="partnership-visual">
+                    <div class="partnership-flow">
+                        <div class="flow-item">
+                            <div class="flow-icon">TECH</div>
+                            <h4>RouteOptimizer Solutions</h4>
+                            <p>Technology Platform</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">
+                            <div class="flow-icon">BIZ</div>
+                            <h4>Capaz Facility Management</h4>
+                            <p>Implementation Partner</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">
+                            <div class="flow-icon">API</div>
+                            <h4>WhatsApp Integration</h4>
+                            <p>Meta Compliance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Our Licensed Partnership</h2>
+            <p class="about-subtitle">ChaleRoute technology by RouteOptimizer Solutions, exclusively implemented in Ghana by Capaz Facility Management Services</p>
+            
+            <div class="about-content">
+                <div class="company-card">
+                    <div class="company-header">
+                        <h3>RouteOptimizer Solutions</h3>
+                        <p class="company-role">ChaleRoute Technology Provider</p>
+                    </div>
+                    <div class="company-details">
+                        <p>RouteOptimizer Solutions is the technology company behind ChaleRoute, providing advanced route optimization algorithms, fuel savings calculations, and logistics intelligence. We develop the core platform that powers smart delivery optimization.</p>
+                        <ul>
+                            <li>Advanced AI route optimization algorithms</li>
+                            <li>Real-time fuel savings calculations</li>
+                            <li>Global logistics technology expertise</li>
+                            <li>Continuous platform development and updates</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="company-card">
+                    <div class="company-header">
+                        <h3>Capaz Facility Management Services</h3>
+                        <p class="company-role">Licensed Local Implementation Partner (BN638160723)</p>
+                    </div>
+                    <div class="company-details">
+                        <p>Capaz Facility Management Services (Business Registration: BN638160723) is our licensed local partner in Ghana, specializing in facility operations and logistics optimization across Greater Accra. They are responsible for all client-facing operations, service delivery, customer support, and Meta compliance.</p>
+                        <ul>
+                            <li>Licensed business registration in Ghana (BN638160723)</li>
+                            <li>Meta/WhatsApp Business API compliance</li>
+                            <li>Local expertise in Accra logistics and traffic</li>
+                            <li>24/7 regional support and client onboarding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="partnership-synergy">
+                <h3>Why This Partnership Works</h3>
+                <p>RouteOptimizer Solutions provides the cutting-edge technology, while Capaz ensures local compliance, support, and understanding of Ghanaian logistics challenges. Together, we deliver a world-class service that's both technologically advanced and locally relevant.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="contact-subtitle">Get in touch with our local implementation partner for support and inquiries</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Capaz Facility Management Services</h3>
+                        <p class="business-role">ChaleRoute Implementation Partner</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h4>Business Registration</h4>
+                                <p>BN638160723</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <h4>WhatsApp Support</h4>
+                                <p>Coming Soon - Pending Meta API Approval</p>
+                                <p class="whatsapp-note">WhatsApp Business API application in progress through Capaz Facility Management Services (BN638160723)</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <h4>Email Support</h4>
+                                <p>support@chaleroute.online</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <h4>Business Address</h4>
+                                <p>HNO 22, North Legon Near Little Campus School<br>
+                                Avenue C-WEST, Accra<br>
+                                Ghana</p>
+                            </div>
+                        </div>
+                        
+                        <div class="compliance-info">
+                            <h4>Meta Compliance</h4>
+                            <p>WhatsApp Business API application in progress through Capaz Facility Management Services (BN638160723). All messaging services will be operated in compliance with Meta's Business API requirements upon approval.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-visual">
+                    <div class="contact-flow">
+                        <div class="flow-step">
+                            <div class="step-icon">TECH</div>
+                            <h4>RouteOptimizer Solutions</h4>
+                            <p>Technology Platform</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-icon">BIZ</div>
+                            <h4>Capaz Facility Management</h4>
+                            <p>Local Implementation</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-icon">YOU</div>
+                            <h4>Your Business</h4>
+                            <p>Route Optimization</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1072,8 +1674,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ChaleRoute</h3>
-                    <p>Smart delivery route optimization for Accra drivers. Save fuel, time, and stay safe with our WhatsApp-powered service.</p>
+                    <h3>ChaleRoute Technology</h3>
+                    <p>Smart logistics technology platform by RouteOptimizer Solutions. Exclusively implemented and supported in Ghana by Capaz Facility Management Services (BN638160723).</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -1085,20 +1687,26 @@
                 <div class="footer-section">
                     <h3>Support</h3>
                     <p>Email: support@chaleroute.online</p>
-                    <p>WhatsApp: Available 24/7</p>
-                    <p>Emergency: SOS feature for immediate help</p>
+                    <p>WhatsApp: Coming Soon (Pending Meta API Approval)</p>
+                    <p>Local Support: Capaz Facility Management Services (BN638160723)</p>
                 </div>
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <a href="https://www.notion.so/ChaleRoute-Privacy-Policy-275150cb21a980caa755ebca0b188b1e" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                    <p>GDPR & CCPA Compliant</p>
-                    <p>Data automatically deleted</p>
+                    <a href="#methodology" target="_blank" rel="noopener noreferrer">Savings Calculation Methodology</a>
+                    <p><strong>Capaz Facility Management Services</strong></p>
+                    <p>Business Registration: BN638160723</p>
+                    <p>Registered Office: HNO 22, North Legon Near Little Campus School, Avenue C-WEST, Accra, Ghana</p>
+                    <p>Meta/WhatsApp Business API Application in Progress</p>
+                    <p>Licensed ChaleRoute technology implementation partner</p>
+                    <p>Responsible for service delivery and customer support</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 ChaleRoute. All rights reserved. Built for Accra drivers, by developers who understand local challenges.</p>
+                <p>&copy; 2025 RouteOptimizer Solutions. ChaleRoute technology exclusively implemented and supported in Ghana by Capaz Facility Management Services (BN638160723). Licensed and contracted through Capaz business registration.</p>
             </div>
         </div>
     </footer>
 </body>
 </html>
+
